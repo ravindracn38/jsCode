@@ -32,5 +32,38 @@ function checkPrime(numForCheck) {
 
 //
 
+function getAllFactors(numforFactors){
+        if (numforFactors % 1 !=0){
+                console.log("Please enter an Integer");
+                return false
+        }
+        console.log("The factors of the number is -- ")
+        for(i=1;i<=numforFactors/2;i++){
+                if (numforFactors%i==0){
+                        console.log(i)
+                }
+        }
+        console.log(numforFactors);
+}
+
+//
+
+function findGCD(num1, num2){
+        if(num1==0){
+                return num2;
+        }
+        if(num2==0){
+                return num1;
+        }
+        if(num1==num2){
+                return num1;
+        }
+        if(num1>num2){
+                return findGCD(num1-num2,num2)
+        }
+
+        return findGCD(num1,num2-num1)
+        
+}
 
 
